@@ -1,14 +1,14 @@
 <?php
-$servername = "localhost"; // Cambia esto si tu base de datos está en otro servidor
-$username = "root"; // Tu usuario de MySQL
-$password = ""; // Tu contraseña de MySQL
-$dbname = "diagnostico_plagas"; // Nombre de la base de datos
+// Configuración para conectar a MySQL usando PDO
+$host = getenv('MYSQL_HOST'); // Dirección del servidor
+$dbname = getenv('MYSQL_DATABASE'); // Nombre de la base de datos
+$user = getenv('MYSQL_USER'); // Usuario
+$password = getenv('MYSQL_PASSWORD'); // Contraseña
 
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Comprobar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+try {
+    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
 }
 ?>

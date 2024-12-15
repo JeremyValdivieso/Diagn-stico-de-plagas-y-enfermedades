@@ -11,7 +11,7 @@
         <h1>Diagnóstico de Plagas y Enfermedades</h1>
     </header>
     <main>
-        <form id="diagnosticForm" enctype="multipart/form-data" method="POST" action="upload.php">
+        <form id="diagnosticForm" enctype="multipart/form-data" method="POST" action="/api/upload.php">
             <label for="plantImage">Sube una imagen de la planta afectada:</label>
             <input type="file" id="plantImage" name="plantImage" accept="image/*" required>
             
@@ -20,6 +20,7 @@
             
             <button type="submit">Enviar Diagnóstico</button>
         </form>
+        
     </main>
     <footer>
         <p>© 2024 Diagnóstico de Plagas y Enfermedades</p>
