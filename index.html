@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Plagas y Enfermedades</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Diagnóstico de Plagas y Enfermedades</h1>
+    </header>
+    <main>
+        <form id="diagnosticForm" enctype="multipart/form-data" method="POST" action="upload.php">
+            <label for="plantImage">Sube una imagen de la planta afectada:</label>
+            <input type="file" id="plantImage" name="plantImage" accept="image/*" required>
+            
+            <label for="description">Descripción del problema:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe los síntomas o problemas observados..." required></textarea>
+            
+            <button type="submit">Enviar Diagnóstico</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Diagnóstico de Plagas y Enfermedades</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
