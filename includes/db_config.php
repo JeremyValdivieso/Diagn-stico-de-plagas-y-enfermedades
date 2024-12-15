@@ -1,13 +1,14 @@
 <?php
-$host = 'localhost'; // Cambia esto si estás usando un servidor remoto
-$dbname = 'diagnostico_plantas';
-$username = 'root'; // Cambia esto por tu usuario
-$password = ''; // Cambia esto por tu contraseña
+$servername = "localhost"; // Cambia esto si tu base de datos está en otro servidor
+$username = "root"; // Tu usuario de MySQL
+$password = ""; // Tu contraseña de MySQL
+$dbname = "diagnostico_plagas"; // Nombre de la base de datos
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Error al conectar con la base de datos: " . $e->getMessage());
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Comprobar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 ?>
