@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Diagnóstico</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sube la Foto de tu Planta Afectada</h1>
+    </header>
+
+    <form action="includes/upload.php" method="POST" enctype="multipart/form-data">
+        <label for="image">Seleccionar Imagen:</label>
+        <input type="file" name="image" id="image" required>
+
+        <label for="cultivo">Tipo de Cultivo:</label>
+        <select name="cultivo" id="cultivo">
+            <option value="1">Tomate</option>
+            <option value="2">Pepino</option>
+            <option value="3">Lechuga</option>
+            <!-- Agrega más opciones según tus necesidades -->
+        </select>
+
+        <label for="sintomas">Síntomas Observados:</label>
+        <textarea name="sintomas" id="sintomas" rows="4" required></textarea>
+
+        <button type="submit">Enviar Diagnóstico</button>
+    </form>
+</body>
+</html>
