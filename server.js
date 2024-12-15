@@ -1,18 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-require('dotenv').config(); // Para manejar variables de entorno
+require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
 
-// Ruta para manejar solicitudes desde el cliente
 app.post('/diagnostico', async (req, res) => {
     const { planta } = req.body;
 
-    // Llama a la API de OpenAI con el tipo de planta
     try {
         const response = await axios.post('https://api.openai.com/v1/completions', {
             model: 'text-davinci-003',
