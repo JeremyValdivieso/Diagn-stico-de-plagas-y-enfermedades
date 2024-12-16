@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Plagas y Enfermedades Agrícolas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Diagnóstico de Plagas y Enfermedades Agrícolas</h1>
+        <p>Selecciona una categoría y luego una planta para obtener su diagnóstico.</p>
+    </header>
+
+    <main>
+        <form id="diagnostic-form">
+            <label for="categoria">Selecciona una categoría:</label>
+            <select id="categoria">
+                <option value="hortalizas">Hortalizas</option>
+                <option value="frutales">Frutales</option>
+                <option value="hierbas">Hierbas y Aromáticas</option>
+                <option value="nativas">Plantas Nativas</option>
+                <option value="medicinales">Plantas Medicinales</option>
+                <option value="ornamentales">Plantas Ornamentales</option>
+            </select>
+
+            <label for="planta">Selecciona una planta:</label>
+            <select id="planta" required>
+                <option value="">Primero selecciona una categoría</option>
+            </select>
+
+            <button type="submit">Obtener Diagnóstico</button>
+        </form>
+
+        <div id="diagnostico" class="diagnostico">
+            <!-- Aquí se mostrará el diagnóstico -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diagnóstico Agrícola</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
