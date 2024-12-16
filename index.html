@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnóstico de Plagas y Enfermedades Agrícolas</title>
+    <title>Diagnóstico Agrícola</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Menú de navegación -->
     <header>
-        <h1>Diagnóstico de Plagas y Enfermedades Agrícolas</h1>
-        <p>Selecciona una categoría y luego una planta para obtener su diagnóstico.</p>
+        <nav class="navbar">
+            <h1 class="logo">Diagnóstico Agrícola</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="diagnostico.html">Diagnóstico</a></li>
+                <li><a href="#manejo-plagas">Manejo de Plagas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <form id="diagnostic-form">
-            <label for="categoria">Selecciona una categoría:</label>
-            <select id="categoria">
-                <option value="hortalizas">Hortalizas</option>
-                <option value="frutales">Frutales</option>
-                <option value="hierbas">Hierbas y Aromáticas</option>
-                <option value="nativas">Plantas Nativas</option>
-                <option value="medicinales">Plantas Medicinales</option>
-                <option value="ornamentales">Plantas Ornamentales</option>
-            </select>
-
-            <label for="planta">Selecciona una planta:</label>
-            <select id="planta" required>
-                <option value="">Primero selecciona una categoría</option>
-            </select>
-
-            <button type="submit">Obtener Diagnóstico</button>
-        </form>
-
-        <div id="diagnostico" class="diagnostico">
-            <!-- Aquí se mostrará el diagnóstico -->
+    <!-- Sección de Bienvenida -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a Diagnóstico Agrícola</h2>
+            <p>Tu aliado para combatir plagas y enfermedades en tus cultivos. Conoce nuestras herramientas y consejos para un manejo agrícola efectivo.</p>
+            <a href="diagnostico.html" class="btn-primary">Realizar Diagnóstico</a>
         </div>
-    </main>
+    </section>
 
+    <!-- Sección de Destacados -->
+    <section id="destacados" class="destacados">
+        <h2>Consejos Destacados</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Control de Plagas</h3>
+                <p>Descubre cómo prevenir plagas comunes como pulgones, ácaros y orugas en tus cultivos.</p>
+                <a href="#manejo-plagas" class="btn-secondary">Aprender más</a>
+            </div>
+            <div class="card">
+                <h3>Enfermedades de las Plantas</h3>
+                <p>Identifica y combate enfermedades fúngicas, bacterianas y virales en tus cultivos.</p>
+                <a href="#manejo-plagas" class="btn-secondary">Leer más</a>
+            </div>
+            <div class="card">
+                <h3>Cuidados Preventivos</h3>
+                <p>Implementa prácticas agrícolas sostenibles para mantener tus cultivos saludables.</p>
+                <a href="#manejo-plagas" class="btn-secondary">Explorar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Manejo de Plagas y Enfermedades -->
+    <section id="manejo-plagas" class="info-section">
+        <h2>Manejo de Plagas y Enfermedades</h2>
+        <p>El manejo de plagas y enfermedades agrícolas requiere un enfoque integrado. Aquí te ofrecemos algunos consejos generales:</p>
+        <ul>
+            <li>Usa trampas biológicas y aceites esenciales para el control de plagas.</li>
+            <li>Identifica temprano los signos de enfermedades en tus cultivos.</li>
+            <li>Fomenta la biodiversidad para prevenir monocultivos vulnerables.</li>
+            <li>Evita el uso excesivo de productos químicos para proteger el medio ambiente.</li>
+        </ul>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas o necesitas ayuda personalizada? Contáctanos.</p>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 Diagnóstico Agrícola</p>
+        <p>&copy; 2024 Diagnóstico Agrícola. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>

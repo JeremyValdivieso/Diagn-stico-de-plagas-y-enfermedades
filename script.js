@@ -232,8 +232,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Actualizar el select de plantas según la categoría seleccionada
     categoriaSelect.addEventListener('change', (e) => {
         const categoria = e.target.value;
+        console.log('Categoría seleccionada:', categoria); // Agregar log
         const plantas = plantasPorCategoria[categoria] || [];
-        
+
+        // Habilitar el select de plantas
+        plantaSelect.disabled = false;
+
         plantaSelect.innerHTML = '<option value="">Selecciona una planta</option>';
         plantas.forEach(planta => {
             const option = document.createElement('option');
@@ -243,6 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
+
     // Mostrar el diagnóstico cuando se seleccione una planta
     document.getElementById('diagnostic-form').addEventListener('submit', (e) => {
         e.preventDefault();
@@ -250,10 +256,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoria = categoriaSelect.value;
         const planta = plantaSelect.value;
 
+        console.log('Planta seleccionada:', planta); // Agregar log
+
         if (categoria && planta && diagnosticos[categoria] && diagnosticos[categoria][planta]) {
             diagnosticoDiv.innerHTML = diagnosticos[categoria][planta];
+            diagnosticoDiv.style.display = 'block'; // Mostrar el div de diagnóstico
         } else {
             diagnosticoDiv.innerHTML = '<p>Por favor, selecciona una categoría y planta válidas.</p>';
-        }
+            diagnosticoDiv.style.display = 'block'; // Mostrar el mensaje de error
+        }              
     });
 });

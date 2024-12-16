@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Agrícola</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el CSS esté bien vinculado -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Diagnóstico Agrícola</h1>
+        <p>Selecciona una categoría y una planta para obtener recomendaciones sobre plagas y enfermedades.</p>
+    </header>
+
+    <!-- Contenedor principal para el formulario -->
+    <main>
+        <form id="diagnostic-form">
+            <!-- Selección de categoría -->
+            <label for="categoria">Categoría de la Planta:</label>
+            <select id="categoria" name="categoria">
+                <option value="">Selecciona una categoría</option>
+                <!-- Las opciones serán generadas dinámicamente con JS -->
+            </select>
+
+            <!-- Selección de planta -->
+            <label for="planta">Planta:</label>
+            <select id="planta" name="planta" disabled>
+                <option value="">Selecciona una planta</option>
+                <!-- Las opciones serán generadas dinámicamente con JS -->
+            </select>
+
+            <!-- Botón de enviar -->
+            <button type="submit">Ver Diagnóstico</button>
+        </form>
+
+        <!-- Div donde se mostrará el diagnóstico -->
+        <div id="diagnostico" style="display: none;">
+            <!-- El diagnóstico se generará dinámicamente aquí -->
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Diagnóstico Agrícola</p>
+    </footer>
+
+    <!-- Vinculación con el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
