@@ -400,3 +400,47 @@ section {
     max-width: 800px; /* Limita el tamaño máximo */
     border-radius: 10px;
 }
+
+
+
+/* Estilo para la sección de Manejo de Plagas y Enfermedades */
+.info-section {
+    background-color: #f4f4f9; /* Fondo claro para la sección */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    margin-bottom: 20px; /* Separación entre secciones */
+}
+
+.info-section h2 {
+    color: #4CAF50; /* Color verde para el título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-bottom: 10px; /* Espaciado debajo del título */
+}
+
+.info-section p {
+    font-size: 16px; /* Tamaño de fuente del párrafo */
+    color: #555; /* Color gris oscuro para el texto */
+    margin-bottom: 15px; /* Espaciado debajo del párrafo */
+}
+
+.info-section ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding-left: 0; /* Elimina el margen izquierdo */
+}
+
+.info-section ul li {
+    font-size: 16px; /* Tamaño de la fuente de los elementos de la lista */
+    color: #333; /* Color para los ítems de la lista */
+    padding-left: 20px; /* Añade un poco de espacio antes del texto */
+    position: relative; /* Para usar un icono o punto personalizado */
+}
+
+.info-section ul li::before {
+    content: "✔"; /* Agrega un ícono o punto personalizado */
+    position: absolute;
+    left: 0; /* Lo posiciona a la izquierda del texto */
+    top: 0; /* Lo alinea al inicio del texto */
+    color: #4CAF50; /* Color verde para los íconos */
+    font-size: 18px; /* Tamaño del ícono */
+}
