@@ -18,14 +18,14 @@ body {
     box-sizing: border-box;
 }
 
-/* Encabezado */
+/* Mejora el encabezado para mayor claridad */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
+    padding: 15px 20px; /* Reduce el padding para mayor compacidad */
     text-align: center;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa para destacar */
     position: fixed;
     top: 0;
     left: 0;
@@ -34,8 +34,9 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
+
 
 header p {
     font-size: 1.2em;
@@ -75,43 +76,76 @@ main {
     width: 90%;
     max-width: 1200px;
     background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.751);
     border-radius: 10px;
+    text-align: center; /* Alinea el texto al centro */
 }
 
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
 
 /* Sección de Bienvenida */
 .hero {
-    margin-top: 100px; /* Espacio para evitar que el contenido se solape con el header */
+    margin-top: 120px; /* Espacio para evitar que el contenido se solape con el header */
     padding: 60px 20px; /* Mantén el padding existente */
-    text-align: center;
-    background-color: #e8f5e9;
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #e8f5e9; /* Fondo de color verde claro */
+    background-image: url('/img/pasto.jpg'); /* Imagen de fondo, si la quieres agregar */
+    background-size: cover; /* Fondo cubre toda la sección */
+    background-position: center; /* Centra la imagen */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(44, 155, 81, 0.999); /* Sombra para darle profundidad */
+    margin-bottom: 30px; /* Espacio debajo de la sección */
 }
 
+/* Resto de las secciones no deben tener el fondo */
+section {
+    background-color: transparent; /* Asegura que otras secciones no tengan fondo */
+}
 
 .hero h2 {
     font-size: 2.5em;
-    color: #4CAF50;
+    color: rgb(59, 139, 83); /* Cambia el color del encabezado h2 a blanco */
     margin-bottom: 10px;
+    line-height: 1.4; /* Ajusta el interlineado del título */
+    font-weight: bold; /* Hace que el título esté en negrita */
 }
 
 .hero p {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255); /* Cambia el color del párrafo p a blanco */
     margin-bottom: 20px;
+    line-height: 1.6; /* Ajusta el interlineado del párrafo */
+    max-width: 1000px; /* Limita el ancho del párrafo para que no se extienda demasiado en pantallas grandes */
+    margin-left: auto; /* Centra el párrafo */
+    margin-right: auto; /* Centra el párrafo */
+    font-weight: bold; /* Hace que el párrafo esté en negrita */
 }
 
 .btn-primary {
     background-color: #4CAF50;
     color: white;
-    padding: 12px 20px;
-    font-size: 1.2em;
+    padding: 15px 30px; /* Botón más grande */
+    font-size: 1.4em;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px; /* Bordes redondeados */
     transition: all 0.3s;
     display: inline-block;
+    margin-top: 20px;
 }
 
 .btn-primary:hover {
@@ -130,10 +164,13 @@ main {
     color: #4CAF50;
 }
 
+
+/* Cards en Destacados */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Tarjetas responsivas */
-    gap: 70px; /* Espacio entre tarjetas */
+    gap: 80px; /* Espacio entre tarjetas */
     margin: 0 auto;
     width: 90%;
 }
@@ -141,16 +178,20 @@ main {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el contenido */
-    padding: 20px;
-    height: 100%; /* Todas las tarjetas tendrán la misma altura */
+    justify-content: space-between;
+    padding: 25px; /* Mayor padding */
+    height: 100%; /* Mantiene la altura uniforme */
     background-color: #ffffff;
     border: 2px solid #4CAF50;
-    border-radius: 50px;
+    border-radius: 15px; /* Bordes más suaves */
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s ease; /* Agrega transición al pasar el mouse */
 }
 
+.card:hover {
+    transform: translateY(-10px); /* Efecto de desplazamiento al pasar el mouse */
+}
 
 .card h3 {
     font-size: 1.5em;
@@ -166,11 +207,11 @@ main {
 .card .btn-secondary {
     background-color: #4CAF50;
     color: white;
-    padding: 8px 12px;
-    font-size: 1em;
+    padding: 12px 20px;
+    font-size: 1.1em;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
+    border-radius: 30px; /* Botones con bordes redondeados */
+    transition: all 0.3s ease;
 }
 
 .card .btn-secondary:hover {
@@ -208,7 +249,9 @@ form {
 }
 
 form label {
+    font-size: 1.1em;
     font-weight: bold;
+    color: #333;
 }
 
 form select, form button {
@@ -230,8 +273,14 @@ form select:focus, form button:hover {
 form button {
     background-color: #4CAF50;
     color: white;
+    padding: 15px 30px; /* Botón más grande */
+    font-size: 1.2em;
+    border-radius: 25px; /* Bordes redondeados */
+    border: none;
     cursor: pointer;
-    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 450px;
 }
 
 form button:disabled {
@@ -239,18 +288,26 @@ form button:disabled {
     cursor: not-allowed;
 }
 
-form input[type="text"], 
-form input[type="email"], 
-form select, 
+form input[type="text"],
+form input[type="email"],
+form select,
 form textarea {
-    padding: 15px; /* Altura del cuadro */
-    font-size: 1.2em; /* Tamaño del texto */
-    border: 2px solid #4CAF50; /* Borde con color */
-    border-radius: 10px; /* Esquinas redondeadas */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: 400px; /* Ancho máximo */
-    box-sizing: border-box; /* Evita que el padding aumente el tamaño total */
-    resize: vertical; /* Permite ajustar el tamaño del textarea verticalmente */
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #4CAF50;
+    border-radius: 8px; /* Bordes redondeados */
+    width: 100%;
+    max-width: 450px; /* Limita el ancho máximo */
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #3E8E41; /* Resalta cuando está en foco */
+    background-color: #f1fdf1; /* Fondo suave cuando está en foco */
 }
 
 
@@ -259,12 +316,16 @@ footer {
     margin-top: auto;
     background-color: #4CAF50;
     color: white;
-    padding: 30px;
+    padding: 30px 20px;
     text-align: center;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 10px rgba(11, 189, 32, 0.2); /* Sombra en la parte inferior */
 }
 
+footer p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
 
 section {
     margin-bottom: 40px; /* Espacio debajo de la sección */
@@ -273,4 +334,19 @@ section {
 .destacados {
     margin-top: 60px; /* Espacio antes de los consejos destacados */
     margin-bottom: 90px; /* Espacio adicional para evitar colisiones */
+}
+
+/*Manejo_plagas_texto */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0; /* Espaciado adicional alrededor del video */
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px; /* Limita el tamaño máximo */
+    border-radius: 10px;
 }
