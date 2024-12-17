@@ -7,8 +7,12 @@ body, h1, h2, h3, p, ul, li, form {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f7f7f7;
-    color: #333;
+    background-image: url('/img/fondo.jpg'); /* Ruta a tu imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* La imagen permanece fija al hacer scroll */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #333; /* Color del texto */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,30 +22,39 @@ body {
     box-sizing: border-box;
 }
 
+
 /* Mejora el encabezado para mayor claridad */
 header {
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* Fondo verde con transparencia */
     color: white;
-    padding: 15px 20px; /* Reduce el padding para mayor compacidad */
+    padding: 20px 40px; /* Más espacio alrededor */
     text-align: center;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa para destacar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave para darle profundidad */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Borde inferior sutil */
+    border-radius: 0 0 10px 10px; /* Redondea las esquinas inferiores */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque del fondo detrás */
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Mayor tamaño del título */
     margin-bottom: 10px;
+    font-weight: 700; /* Título en negrita */
+    letter-spacing: 2px; /* Espaciado entre letras */
 }
-
 
 header p {
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 300; /* Ligera negrita */
+    margin-top: 0;
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
+
+
 
 /* Menú de Navegación */
 .navbar ul {
@@ -70,7 +83,7 @@ header p {
 
 /* Contenedor principal */
 main {
-    margin-top: 100px; /* Evita el solapamiento con header */
+    margin-top: 150px; /* Evita el solapamiento con header */
     margin-bottom: 40px; /* Espacio debajo del contenedor */
     padding: 20px;
     width: 90%;
@@ -97,6 +110,22 @@ ul {
     padding-left: 0;
     text-align: left;
 }
+
+/* cuadrilla para los demás html */
+
+.hero3 {
+    margin-top: 10px; /* Espacio para evitar que el contenido se solape con el header */
+    padding: 60px 20px; /* Mantén el padding existente */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #e8f5e9; /* Fondo de color verde claro */
+    background-image: url('/img/past22o.jpg'); /* Imagen de fondo, si la quieres agregar */
+    background-size: cover; /* Fondo cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(44, 155, 81, 0.999); /* Sombra para darle profundidad */
+    margin-bottom: 30px; /* Espacio debajo de la sección */
+}
+
 
 /* Sección de Bienvenida */
 .hero {
@@ -174,7 +203,7 @@ section {
 
 /* Sección de Consejos Destacados */
 .destacados {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -189,7 +218,7 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Tarjetas responsivas */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Tarjetas responsivas */
     gap: 80px; /* Espacio entre tarjetas */
     margin: 0 auto;
     width: 90%;
@@ -200,7 +229,7 @@ section {
     flex-direction: column;
     justify-content: space-between;
     padding: 25px; /* Mayor padding */
-    height: 100%; /* Mantiene la altura uniforme */
+    height: 50%; /* Mantiene la altura uniforme */
     background-color: #ffffff;
     border: 2px solid #4CAF50;
     border-radius: 15px; /* Bordes más suaves */
@@ -238,13 +267,14 @@ section {
     background-color: #3e8e41;
 }
 
+
 /* Diagnóstico */
 #diagnostico {
     background: #e8f5e9;
     border: 2px solid #4CAF50;
     border-radius: 10px;
     padding: 15px;
-    margin-top: 10px;
+    margin-top: 40px;
     text-align: left;
     display: none; 
 }
