@@ -239,6 +239,21 @@ form button:disabled {
     cursor: not-allowed;
 }
 
+form input[type="text"], 
+form input[type="email"], 
+form select, 
+form textarea {
+    padding: 15px; /* Altura del cuadro */
+    font-size: 1.2em; /* Tamaño del texto */
+    border: 2px solid #4CAF50; /* Borde con color */
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 400px; /* Ancho máximo */
+    box-sizing: border-box; /* Evita que el padding aumente el tamaño total */
+    resize: vertical; /* Permite ajustar el tamaño del textarea verticalmente */
+}
+
+
 /* Pie de página */
 footer {
     margin-top: auto;
