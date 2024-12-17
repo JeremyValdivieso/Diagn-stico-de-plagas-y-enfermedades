@@ -69,28 +69,28 @@ header p {
 
 /* Contenedor principal */
 main {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin-top: 100px; /* Evita el solapamiento con header */
+    margin-bottom: 40px; /* Espacio debajo del contenedor */
     padding: 20px;
     width: 90%;
-    max-width: 800px;
-    text-align: center;
-    position: relative;
-    z-index: 500;
+    max-width: 1200px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
 
 /* Sección de Bienvenida */
 .hero {
-    width: 100%;
-    background-color: #e8f5e9;
-    padding: 60px 20px;
+    margin-top: 100px; /* Espacio para evitar que el contenido se solape con el header */
+    padding: 60px 20px; /* Mantén el padding existente */
     text-align: center;
+    background-color: #e8f5e9;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
+
 
 .hero h2 {
     font-size: 2.5em;
@@ -132,20 +132,25 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustado para ser responsivo */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Tarjetas responsivas */
+    gap: 70px; /* Espacio entre tarjetas */
     margin: 0 auto;
     width: 90%;
 }
 
 .card {
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido */
     padding: 20px;
+    height: 100%; /* Todas las tarjetas tendrán la misma altura */
+    background-color: #ffffff;
     border: 2px solid #4CAF50;
-    border-radius: 10px;
+    border-radius: 50px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .card h3 {
     font-size: 1.5em;
@@ -219,7 +224,7 @@ form select, form button {
 
 form select:focus, form button:hover {
     border-color: #3E8E41;
-    background-color: #f0f9f0;
+    background-color: #f0f9f0
 }
 
 form button {
@@ -239,8 +244,18 @@ footer {
     margin-top: auto;
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+section {
+    margin-bottom: 40px; /* Espacio debajo de la sección */
+}
+
+.destacados {
+    margin-top: 60px; /* Espacio antes de los consejos destacados */
+    margin-bottom: 90px; /* Espacio adicional para evitar colisiones */
 }
