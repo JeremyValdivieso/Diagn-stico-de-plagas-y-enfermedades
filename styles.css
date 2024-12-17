@@ -136,6 +136,26 @@ section {
     font-weight: bold; /* Hace que el párrafo esté en negrita */
 }
 
+
+/* volver al inicio */
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #3e8e41;
+}
+
+
 .btn-primary {
     background-color: #4CAF50;
     color: white;
